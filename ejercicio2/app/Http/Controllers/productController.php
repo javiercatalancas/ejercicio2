@@ -34,7 +34,18 @@ class productController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validación
+        dd($request->all());   
+        $rules =[
+            'nombre_producto' => 'required|',
+            'descripcion' => 'required|email',
+        ];
+
+
+        
+
+
+        return "OK!";
     }
 
     /**

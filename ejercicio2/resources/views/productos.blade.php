@@ -7,6 +7,5 @@
     <title>Document</title>
 </head>
 <body>
-    <p>TUS MUERTOS</p>
 </body>
 </html>

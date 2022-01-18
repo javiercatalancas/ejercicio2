@@ -34,7 +34,7 @@
 
 <div class="form-group">
     <label for="Descripción">Descripción</label>
-    <textarea class="form-control" name="descripción" id="descripción" maxlength="200"></textarea>
+    <textarea class="form-control" name="descripcion" id="descripción" maxlength="200"></textarea>
 </div>
 <div class="form-group">
     <label for="status">Status:</label>
@@ -47,7 +47,7 @@
 <div class="form-group">
     
     <label for="activo">Activo</label>
-    <input type="checkbox" class="form-control" value="true" name="true" id="true">
+    <input type="checkbox" class="form-control" name="activo" id="activo">
     
 </div>
 
