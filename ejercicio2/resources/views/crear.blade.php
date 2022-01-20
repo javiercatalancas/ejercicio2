@@ -39,8 +39,8 @@
 <div class="form-group">
     <label for="status">Status:</label>
     <select name="status">
-        <option value="1" selected>VENTA</option>
-        <option value="2">STOCK</option>
+        <option value="venta" selected>VENTA</option>
+        <option value="stock">STOCK</option>
     </select>
 </div>
 
@@ -53,7 +53,7 @@
 
 <div class="form-group">
     <label for="precio">Precio:</label>
-    <input type="number" class="form-control" name="precio" id="precio" placeholder="introduce precio">
+    <input type="number" step="0.01" class="form-control" name="precio" id="precio" placeholder="introduce precio">
 </div>
 
 <div class="form-group">

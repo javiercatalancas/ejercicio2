@@ -35,16 +35,24 @@ class productController extends Controller
     public function store(Request $request)
     {
         // validación
-        dd($request->all());   
+       // dd($request->all());   
         $rules =[
-            'nombre_producto' => 'required|',
-            'descripcion' => 'required|email',
+            'nombre_producto' => 'required|min:5|max:80|string',
+            'descripcion' => 'required|max:200',
+            //'status' => 'same:venta',
+            'activo' => 'required|boolean',
+            'precio' => 'numeric|regex:/^[\d]{0,}(.[\d]{2})?$/',
+            'oferta_desde' => 'date_format:Y-m-d',
+            'oferta_hasta' => 'date_format:Y-m-d|after:oferta_desde',
+            // preguntar escapar
+            'codigo_producto' => ''
+
         ];
-
-
-        
-
-
+        $messages = [
+            'required'=>'El campo :attribute es obligatorio.'
+            
+        ];
+        $validatedData = $request->validate($rules, $messages);
         return "OK!";
     }
 
