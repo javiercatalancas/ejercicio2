@@ -38,14 +38,13 @@ class productController extends Controller
        // dd($request->all());   
         $rules =[
             'nombre_producto' => 'required|min:5|max:80|string',
-            'descripcion' => 'required|max:200',
-            //'status' => 'same:venta',
+            'descripcion' => 'required|max:200|nullable',
+            'status' => 'nullable',
             'activo' => 'required|boolean',
-            'precio' => 'numeric|regex:/^[\d]{0,}(.[\d]{2})?$/',
-            'oferta_desde' => 'date_format:Y-m-d',
-            'oferta_hasta' => 'date_format:Y-m-d|after:oferta_desde',
-            // preguntar escapar
-            'codigo_producto' => ''
+            'precio' => 'numeric|regex:/^[\d]{0,}(.[\d]{2})?$/|nullable',
+            'oferta_desde' => 'date_format:Y-m-d|nullable',
+            'oferta_hasta' => 'date_format:Y-m-d|after:oferta_desde|nullable',
+            'codigo_producto' => ['required','regex:/^#[A-Z]{2}-?[0-9]{5}$|^#[A-Z]{3}-?[0-9]{8}$/']
 
         ];
         $messages = [
@@ -53,7 +52,7 @@ class productController extends Controller
             
         ];
         $validatedData = $request->validate($rules, $messages);
-        return "OK!";
+        return "Funcionando";
     }
 
     /**

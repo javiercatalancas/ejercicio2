@@ -47,7 +47,7 @@
 <div class="form-group">
     
     <label for="activo">Activo</label>
-    <input type="checkbox" class="form-control" name="activo" id="activo">
+    <input type="checkbox" class="form-control" name="true" id="activo">
     
 </div>
 
